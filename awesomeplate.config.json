@@ -15,6 +15,7 @@
     "node_modules/slick-carousel/slick/slick.js",
     "node_modules/@fancyapps/ui/dist/fancybox.umd.js",
     "node_modules/aos/dist/aos.js",
+    "node_modules/inputmask/dist/jquery.inputmask.js",
     "src/js/**/*.js"
   ]
 }

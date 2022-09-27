@@ -32,6 +32,7 @@
     "aos": "^2.3.4",
     "dropkick": "^0.1.1",
     "fancybox": "^3.0.1",
+    "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.0",
     "parsleyjs": "^2.9.2",
