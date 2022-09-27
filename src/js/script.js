@@ -365,3 +365,12 @@ showAlert();
 });
 
 //pay page
+
+
+//MAP ZOOM
+
+$(document).ready(function(){
+	$('.mapa').zoom();
+});
+
+//MAP ZOOM

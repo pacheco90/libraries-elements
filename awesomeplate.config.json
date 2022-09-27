@@ -16,6 +16,7 @@
     "node_modules/@fancyapps/ui/dist/fancybox.umd.js",
     "node_modules/aos/dist/aos.js",
     "node_modules/inputmask/dist/jquery.inputmask.js",
+    "node_modules/jquery-zoom/jquery.zoom.min.js",
     "src/js/**/*.js"
   ]
 }
