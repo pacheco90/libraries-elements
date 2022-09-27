@@ -1,0 +1,132 @@
+.carousel-dots{
+    // padding-top: 40px;
+    line-height: 0px;
+    position: relative;
+
+    img{
+        width: 100%;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: calc(100% - 55px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+
+        &.right3 {
+            left: auto;
+            right: 0;
+        }
+
+        img {
+            width: 40px;
+            transition: all 0.3s;
+
+            @media( max-width: 768px ) {
+                width: 20px;
+            }
+        }
+
+        &:hover {
+
+            &.left3 {
+                img {
+                    transform: translateX(-10px);
+                }
+            }
+
+            &.right3 {
+                img {
+                    transform: translateX(10px);
+                }
+            }
+        }
+        
+    }
+}
+
+.slider3 {
+    z-index: 1;
+    position: relative;
+    background: #efefef;
+
+    .slick-slide {
+        line-height: 0;
+    }
+
+    .slick-dots {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        @media( max-width: 768px ) {
+            justify-content: center;
+            bottom: 0px;
+        }
+
+        li {
+            padding: 5px 11px;
+            position: relative;
+            cursor: pointer;
+
+            @media( max-width: 768px ) {
+                padding: 5px;
+            }
+
+            button {
+                opacity: 0;
+            }
+
+            &:before {
+                content: "";
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                left: -15px;
+                transition: all 0.3s;
+                
+
+                @media( max-width: 768px ) {
+                    width: 15px;
+                    height: 15px;
+                    left: 10px;
+                }
+            }
+
+            &.slick-active {
+
+                &:before {
+                    background-color: $blue;
+                }
+            }
+
+            // mis cambios
+            &:before {
+                background-color: $gray;
+                border: 2px solid $gray
+                    }
+        
+            &.slick-active {
+        
+                &:before {
+                background-color: $blue;
+                border: 2px solid $blue;
+                        }
+                }
+        }
+    }
+}

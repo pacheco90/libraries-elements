@@ -1,0 +1,142 @@
+.selectors{
+    padding: 40px 0;
+
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+
+        h2{
+            font-family: $primary-font-bold;
+            font-size: 30px;
+            text-align: center;
+            line-height: 35px;
+            color: $blue;
+        }
+
+        p{
+            font-family: $primary-font-regular;
+            font-size: 18px;
+            text-align: center;
+            line-height: 25px;
+        }
+        
+        .datos{
+            max-width: 500px;
+            width: 100%;
+
+            form{
+                width: 100%;
+                padding: 20px;
+            
+                label{
+                    width: 100%;
+                    color: $blue;
+                    font-family: $primary-font-regular;
+                }
+            
+            
+                .selectores{
+                    margin: 15px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+            
+                    input{
+                        display: none;
+                    }
+            
+                    label{
+                        position: relative;
+                        margin-left: 25px;
+                        text-align: left;
+            
+            
+                        &:before{
+                            content:"";
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            background: none;
+                            border:1px solid #C4C4C4;
+                            border-radius: 50%;
+                            left: -21px;
+                            top:4px;
+                            transition: all 0.3s;
+                            z-index: 1;   
+                        }
+            
+                        &:after{
+                            content:"";
+                            position: absolute;
+                            width: 15px;
+                            height: 15px;
+                            background: #C4C4C4;
+                            border:2.5px solid #C4C4C4;
+                            border-radius: 50%;
+                            left: -25px;
+                        }
+            
+                    }
+            
+                    input[type="radio"]:checked + label:before{
+                        background: $blue;
+                        border:1px solid #fff;
+                    }
+                    input[type="radio"]:checked + label:after{
+                        border:2.5px solid $blue;
+                        background: #fff;
+                    }
+                }
+            
+                // dropkicks
+            
+                // .dk-select {
+                //     width: 100%;
+        
+                //     .dk-selected {
+                //         background: #F9F9F9;
+                //         border:2.5px solid #C4C4C4;
+                //         padding: 10px;
+                //         text-align: center;
+        
+                //         &:before {
+                //             border: none;
+                //             background: url(../img/chevron-down-solid.svg);
+                //             background-repeat: no-repeat !important;
+                //             background-size: contain !important;
+                //             width: 20px;
+                //             height: 20px;
+                //             top: 15px;
+                //         }
+        
+                //         &:after {
+                //             border: none;
+                //         }
+                //     }
+        
+                //     .dk-select-options {
+        
+                //         .dk-option {
+                //             text-align: center;
+                //         }
+                //     }
+        
+                //     &.dk-select-open-down {
+        
+                //         .dk-selected {
+                //             &:before {
+                //                 background: url(../img/chevron-up-solid.svg);
+                //             }
+                //         }
+                //     }
+                // }
+                
+            }
+        }
+    }
+}

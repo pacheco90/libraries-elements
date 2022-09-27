@@ -1,0 +1,90 @@
+.button{
+    padding: 280px 0;
+    background: gray;
+
+    .container{
+
+        .centerbutton {
+            width: 230px;
+            height: 65px;
+            border: 1px solid #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+            cursor: pointer;
+            background: #000;
+            color: #fff;
+        }
+
+        
+        .centerbutton .inner {
+            -webkit-transform: skewX(15deg);
+            transform: skewX(15deg);
+        }
+        
+
+        .callbackdiv {
+            opacity: 0;
+            margin-top: -100px;
+            margin-bottom: -120px;
+            -webkit-transition: 300ms;
+            transition: 300ms;
+        }
+
+  
+        .callbackdiv.show {
+            opacity: 1;
+            margin-bottom: 10px;
+            font-size: 20px;
+            -webkit-transition: 300ms;
+            transition: 300ms;
+        }
+  
+        .callbackdiv .steam1,
+        .callbackdiv .steam2,
+        .callbackdiv .steam3 {
+            -webkit-transition: 200ms linear;
+            transition: 200ms linear;
+        }
+  
+        .callbackdiv.show .steam1,
+        .callbackdiv.show .steam2,
+        .callbackdiv.show .steam3 {
+            -webkit-transition: 4000ms linear;
+            transition: 4000ms linear;
+            -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+        }
+  
+        .callbackdiv.show .steam1 {
+            -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+        }
+  
+        .callbackdiv.show .steam2 {
+            -webkit-transform: translateY(-16px);
+            transform: translateY(-16px);
+        }
+  
+        .callbackdiv.show .steam3 {
+            -webkit-transform: translateY(-22px);
+            transform: translateY(-22px);
+        }
+        
+        .clickedClone {
+            color: #303030;
+            -webkit-transition: 1000ms ease-in-out;
+            transition: 1000ms ease-in-out;
+        }
+  
+        .clickedClone .hf_buttfill {
+            -webkit-clip-path: inset(0% 0%);
+            clip-path: inset(0% 0%);
+        }
+    }
+  
+}

@@ -1,0 +1,19 @@
+.banner-home{
+    background: url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+        h1{
+            font-family: $primary-font-bold;
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+        }
+    }
+}
