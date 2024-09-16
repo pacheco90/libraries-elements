@@ -82,20 +82,50 @@ $(document).ready(()=>{
 
 //accordeon
 
-	const showAccordeon = (elem, height) => {
-		elem.parentElement.classList.add('show');
-		elem.style.height = height + "px"
-	};
-	const closeAccordeon = (elem) => {
-		elem.parentElement.classList.remove('show');
-		elem.style.height = "0px"
-	};
+	// const showAccordeon = (elem, height) => {
+	// 	elem.parentElement.classList.add('show');
+	// 	elem.style.height = height + "px"
+	// };
+	// const closeAccordeon = (elem) => {
+	// 	elem.parentElement.classList.remove('show');
+	// 	elem.style.height = "0px"
+	// };
 
-	if(document.querySelector(".accordeon"))
-	document.querySelector(".accordeon").addEventListener('click', (elem) => {
-		let show= elem.target.parentElement.classList.contains("show");        
-		!show ? showAccordeon(elem.target.nextElementSibling, elem.target.nextElementSibling.scrollHeight) : closeAccordeon(elem.target.nextElementSibling);
-	});
+	// if(document.querySelector(".accordeon"))
+	// document.querySelector(".accordeon").addEventListener('click', (elem) => {
+	// 	let show= elem.target.parentElement.classList.contains("show");        
+	// 	!show ? showAccordeon(elem.target.nextElementSibling, elem.target.nextElementSibling.scrollHeight) : closeAccordeon(elem.target.nextElementSibling);
+	// });
+
+
+  const showAccordeon = (elem, height) => {
+    elem.parentElement.classList.add('show');
+    elem.style.height = height + "px";
+  };
+
+  const closeAccordeon = (elem) => {
+      elem.parentElement.classList.remove('show');
+      elem.style.height = "0px";
+  };
+
+  // Selecciona todos los acordeones y agrega el event listener
+  const accordeons = document.querySelectorAll(".accordeon");
+
+  accordeons.forEach(function(accordeon) {
+      accordeon.addEventListener('click', (event) => {
+          const target = event.target;
+          if (target && target.nextElementSibling) {
+              const isOpen = target.parentElement.classList.contains("show");
+              if (!isOpen) {
+                  showAccordeon(target.nextElementSibling, target.nextElementSibling.scrollHeight);
+              } else {
+                  closeAccordeon(target.nextElementSibling);
+              }
+          }
+      });
+  });
+
+
 
 //accordeon
 
