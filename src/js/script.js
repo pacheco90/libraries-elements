@@ -1,7 +1,25 @@
-//barra de navegacion
-const navigator = document.querySelector(".navigation");
-document.querySelector(".bars").addEventListener("click", ()=> navigator.classList.add('show'));
-document.querySelector(".closebar").addEventListener("click", ()=> navigator.classList.remove('show'));
+window.onload = function() {
+  //barra de navegacion
+  // const navigator = document.querySelector(".navigation");
+  // document.querySelector(".bars").addEventListener("click", ()=> navigator.classList.add('show'));
+  // document.querySelector(".closebar").addEventListener("click", ()=> navigator.classList.remove('show'));
+
+
+  const navigator = document.querySelector(".navigation");
+
+  let showNavigator = function() {
+    navigator.classList.add('show');
+  };
+
+  let hideNavigator = function() {
+    navigator.classList.remove('show');
+  };
+
+  document.querySelector(".bars").addEventListener("click", showNavigator);
+  document.querySelector(".closebar").addEventListener("click", hideNavigator);
+  document.querySelector("main").addEventListener("click", hideNavigator);
+
+};
 
 //Reduce Header
 const header = document.querySelector("header");
